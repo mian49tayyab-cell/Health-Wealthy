@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-brand-emerald: #064e3b;
+  --color-brand-emerald-dark: #022c22;
+  
+  --color-brand-gold: #c5a059;
+  --color-brand-gold-dark: #b68d40;
+  
+  --color-brand-text: #1a1a1a;
+  --color-brand-bg: #fdfcfb;
+  --color-brand-sidebar: #f8f6f2;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-text font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold tracking-tight;
+  }
+}
+
+.premium-card {
+  @apply bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-500 overflow-hidden border border-gray-100;
+}
+
+.editorial-heading {
+  @apply font-serif italic border-b-2 border-brand-gold pb-1;
+}
+
+.sticky-nav {
+  @apply sticky top-0 z-50 bg-white border-b border-gray-200;
+}
+
+.dark {
+  --color-brand-bg: #121212;
+  --color-brand-text: #fafafa;
+  --color-brand-sidebar: #1a1a1a;
+}
